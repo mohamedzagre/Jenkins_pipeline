@@ -1,3 +1,4 @@
-localhost ansible_user=root 
+[local]
+52.91.106.111  ansible_connection=local
 [remote_web]
 ec2-user@3.86.76.65 
