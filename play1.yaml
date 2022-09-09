@@ -4,9 +4,9 @@
   hosts: localhost
   tasks:
   - name: Running mvn clean
-      shell: "mvn clean install"
-      register: mvn_result
+    command: "mvn clean install"
+    register: mvn_result
 
-    - name: "mvn clean task output"
-      debug:
-       var: mvn_result
+  - name: "mvn clean task output"
+    debug:
+    var: mvn_result
