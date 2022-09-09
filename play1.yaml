@@ -3,6 +3,6 @@
 - name: "Run Maven build on Jenkins CI server"
   hosts: localhost
   tasks:
-  - name: "Running mvn clean"
-    command: mvn clean install
+  - name: Running mvn clean
+    shell: "mvn clean install"
   
