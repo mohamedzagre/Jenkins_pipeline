@@ -9,4 +9,4 @@
 
   - name: "mvn clean task output"
     debug:
-    var: mvn_result
+      var: mvn_result
