@@ -1,7 +1,8 @@
 
 ---
 - name: "Run Maven build on Jenkins CI server"
-  hosts: localhost
+  hosts: local
+  connection: local
   tasks:
   - name: Running mvn clean
     shell: "mvn clean install"
