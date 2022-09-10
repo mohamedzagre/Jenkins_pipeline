@@ -6,5 +6,6 @@
   tasks:
   - name: Running mvn clean
     shell: "mvn clean install"
-    become: yes
-  
+    become: true
+    become_user: root
+
