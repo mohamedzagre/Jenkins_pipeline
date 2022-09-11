@@ -18,13 +18,14 @@
 
     copy:
 
-      src: var/lib/jenkins/target/webapp/webapp.war
+      src: /var/lib/jenkins/workspace/play1/webapp/target/webapp.war
+
 
       dest: .
 
   - name: Stop the running container
 
-    command: docker stop customcontainer
+    command: docker stop mycontainer
 
     ignore_errors: True
 
@@ -32,7 +33,7 @@
 
   - name: remove the running container
 
-    command: docker rm customcontainer
+    command: docker rm mycontainer
 
     ignore_errors: True
 
@@ -40,7 +41,7 @@
 
   - name: remove the running image
 
-    command: docker rmi customimage
+    command: docker rmi myimage
 
     ignore_errors: True
 
@@ -48,11 +49,11 @@
 
   - name: Create the image from Docker file
 
-    command: docker build -t customimage .
+    command: docker build -t myimage .
 
 
 
   - name: Create and run container
 
-    command: docker run -d -p 8080:8080 --name customcontainer customimage
+    command: docker run -d -p 8080:8080 --name mycontainer myimage
 
