@@ -11,7 +11,7 @@
 
     copy:
 
-      src: Dockerfile
+      src: . ~ Dockerfile 
 
       dest: .
 
