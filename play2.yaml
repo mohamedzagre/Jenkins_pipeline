@@ -15,7 +15,7 @@
 
       dest: .
       
-      chdir: /home/ec2-user
+      
 
   - name: copy war file into Remote machine
 
